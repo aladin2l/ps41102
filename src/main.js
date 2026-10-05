@@ -106,10 +106,7 @@ async function doJb() {
     find_all_proc();
 
     // Avoid reapplying if already done
-    if (fn.setuid.invoke(0) === 0) {
-      showMessage("GoldHEN Already Loaded");
-    } else {
-      logger.info("Triggering userland jailbreak...");
+    if (fn.setuid.invoke(0) === -1) {
       jailbreak();
 
       const kpatches_rsp = await fetch(`src/ps4/patches/${constants.KPATCH}`);
