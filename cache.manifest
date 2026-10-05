@@ -5,6 +5,7 @@ index.html
 appcache_manifest_generator.py
 includes/script.js
 includes/style.css
+includes/cat.jpg
 src/payload.bin
 src/lapse.js
 src/loader.js
